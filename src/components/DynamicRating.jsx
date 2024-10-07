@@ -30,7 +30,8 @@ const DynamicRating = () => {
           <FaStar
             key={index}
             size={"90px"}
-            // Fill yellow if star value is less than or equal to hovered value or clicked value
+            //Stars with starValue <= hoverValue (i.e., stars 1 and 2) will now be yellow.
+            //The remaining stars (starValue > 2) will remain gray.
             color={starValue <= (hoverValue || clickValue) ? "yellow" : "gray"}
             // Handle mouse enter event
             onMouseEnter={() => handleMouseEnter(starValue)}
